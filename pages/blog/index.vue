@@ -18,7 +18,8 @@ export default {
         <h2>
           <nuxt-link :to="post.path"> {{ post.title }} </nuxt-link>
         </h2>
-        <p>{{ post.description }}</p>
+        <p v-if="post.description">{{ post.description }}</p>
+        <nuxt-content v-else :document="{ body: post.excerpt }" />
       </li>
     </ul>
   </div>
