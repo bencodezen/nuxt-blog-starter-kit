@@ -8,7 +8,7 @@ Empower your NuxtJS application with `@nuxtjs/content` module: write in a `conte
 
 <!--more-->
 
-<nuxt-img src="/arnold-francisca-coding.jpg" sizes="lg:800px md:600px sm:400px" />
+<nuxt-img src="/arnold-francisca-coding.jpg" sizes="lg:800px md:600px sm:400px"></nuxt-img>
 
 ## Writing content
 
