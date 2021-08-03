@@ -15,7 +15,9 @@ export default {
     <h1>Blog Page</h1>
     <ul>
       <li v-for="(post, index) in postList" :key="`post-${index}`">
-        <h2>{{ post.title }}</h2>
+        <h2>
+          <nuxt-link :to="post.path"> {{ post.title }} </nuxt-link>
+        </h2>
         <p>{{ post.description }}</p>
       </li>
     </ul>
