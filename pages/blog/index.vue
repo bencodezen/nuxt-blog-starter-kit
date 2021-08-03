@@ -2,12 +2,9 @@
 export default {
   async asyncData({ $content }) {
     const postList = await $content('blog').fetch()
-    const filteredResults = postList.map((item) => ({
-      slug: item.slug,
-    }))
 
     return {
-      filteredResults,
+      postList,
     }
   },
 }
@@ -16,7 +13,12 @@ export default {
 <template>
   <div>
     <h1>Blog Page</h1>
-    <p>{{ filteredResults }}</p>
+    <ul>
+      <li v-for="(post, index) in postList" :key="`post-${index}`">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.description }}</p>
+      </li>
+    </ul>
   </div>
 </template>
 
